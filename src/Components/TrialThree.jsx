@@ -48,14 +48,14 @@ export default function TrialThr() {
   });
 
   return (
-    <div className="relative flex ">
+    <div>
       <img
         ref={neptunePlanet}
         src={neptune}
         alt="neptune"
         width={200}
         height={200}
-        className="absolute bottom-0 left-0"
+        className="planet"
       />
       <img
         ref={earthPlanet}
@@ -63,7 +63,7 @@ export default function TrialThr() {
         alt="earth planet"
         width={200}
         height={200}
-        className="absolute bottom-0 right-0"
+        className="planet"
       />
     </div>
   );

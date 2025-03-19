@@ -18,7 +18,7 @@ const UseSpring = () => {
     const handleMouseEnter = () => {
         api.start({
             from: { x : currentPosition },
-            to: { x : 500},
+            to: { x : 500, transform: 'rotate(360deg)'},
             config: { duration: 5000 },
         })
     }

@@ -60,7 +60,7 @@ export default function ExitEnter() {
   }, [activeIndex])
 
   return (
-    <div className={styles.container}>
+    <div className='gallery'>
       <div className={styles.container__inner}>
         {transitions((springs, item) => (
           <animated.div className={styles.img__container} style={springs}>
@@ -69,7 +69,7 @@ export default function ExitEnter() {
         ))}
         <div className={styles.ticker}>
           <div />
-          <animated.svg
+          <animated.svg className="svg"
             width="40"
             height="40"
             viewBox="0 0 40 40"

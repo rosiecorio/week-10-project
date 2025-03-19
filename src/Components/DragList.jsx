@@ -4,8 +4,6 @@ import { useDrag } from 'react-use-gesture'
 import clamp from 'lodash.clamp'
 import swap from 'lodash-move'
 
-import styles from './styles.module.css'
-
 const fn = (order, active = false, originalIndex = 0, curIndex = 0, y = 0) => (index) =>
   active && index === originalIndex
     ? {
@@ -33,17 +31,15 @@ export function DraggableList({ items }) {
     api.start(fn(newOrder, active, originalIndex, curIndex, y)) // Feed springs new style data, they'll animate the view without causing a single render
     if (!active) order.current = newOrder
   })
+
   return (
-    <div className={styles.content} style={{ height: items.length * 50 }}>
-      {springs.map(({ zIndex, shadow, y, scale }, i) => (
+    <div className="content">
+      {springs.map(({y}, i) => (
         <animated.div className="listItem"
           {...bind(i)}
           key={i}
           style={{
-            zIndex,
-            boxShadow: shadow.to(s => `rgba(0, 0, 0, 0.15) 0px ${s}px ${2 * s}px 0px`),
-            y,
-            scale,
+            transform: y.to((y) => `translateY(${y}px)`),            
           }}
           children={items[i]}
         />
