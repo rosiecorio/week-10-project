@@ -39,7 +39,7 @@ export default function TrialThr() {
         scrub: 8,
       },
       x: -200,
-      y: 500,
+      y: 300,
       rotate: -200,
       duration: 9,
       delay: 0.1,
