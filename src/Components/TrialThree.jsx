@@ -1,6 +1,6 @@
 import "./Trial3.css"
 import neptune from "../images/neptune.png";
-import earth from "../images/earth.png";
+import earth from "../images/blueplanet.png";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

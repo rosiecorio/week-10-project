@@ -5,32 +5,34 @@ import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { Power3 } from "gsap/gsap-core";
 import saturn from "../images/saturn.png"
-import { ScrollTrigger } from "gsap/all";
-import { TextPlugin } from "gsap/all";
+import { MotionPathPlugin, ScrollTrigger, TextPlugin } from "gsap/all";
+
 
 export default function Trial() {
   const saturnRef = useRef();
+  const containerRef = useRef()
+useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: saturnRef.current,
-        markers: true,
-        start: "top 90%",
-        end: "bottom 20%",
-        scrub: 2,
-      },
-      duration: 15,
-      ease: Power3.easeInOut,
-      pin: ".text",
-      
-    });
-
-    tl.to(saturnRef.current, { x: 1000, y: 600, duration: 5, rotate: 180 })
-      .to(saturnRef.current, { x: 0, y: 200, duration: 5, rotate: 180 })
-      .to(saturnRef.current, { x: 0, y: 0, duration: 5, rotate: 180 });
-  });
+        gsap.to(saturnRef.current, {
+                scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: 2,
+                },
+                motionPath: {
+                        path: "M 0 -600 C 600 -600 600 600 0 600 C -600 600 -600 -600 0 -600",
+                
+                        autoRotate: true,
+                        alignOrigin: [0.5, 0.5],
+                },
+                duration: 10,
+                ease: "power3.inOut",
+                rotate: 180,
+                repeat: 3,
+        })
+})
   useGSAP(() => {
     gsap.registerPlugin(TextPlugin);
     gsap.to("#desc", {
@@ -67,14 +69,12 @@ export default function Trial() {
   });
   return (
     <div className="bg">
-      <div className="saturn-container">
+      <div className="saturn-container" ref={containerRef}>
         <img
           ref={saturnRef}
           src={saturn}
-          alt="saturn planet"
-          width={300}
-          height={300}
-    
+          alt="saturn planet"         
+          id="saturn"
         />
         <div className="text-container">
           <h3

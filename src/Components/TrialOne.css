@@ -2,32 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Modak&family=Pixelify+Sans&family=Righteous&family=Sniglet&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .bg{
         background-color: black;
-}
-.saturn-container {
-        height: 100vh;
-        display: flex;
-        
-}
-
-.text-container {
+        height: 140vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        position: relative;
+}
+.saturn-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative
+        
+}
+#saturn {
+        position: absolute;
+        width: 400px;
+        height: auto;
+}
+.text-container {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
 }
 #title {
         color: antiquewhite;
-        padding-top: 120px;
         font-family: "Audiowide", sans-serif;
         font-weight: 400;
-        font-style: normal;
-        font-size: 70px;
+        font-size: 50px;
+        text-align: center;
 }
 #desc {
         text-align: center;
         font-family: "Space Mono", monospace;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 20px;
 }
 
 .start {

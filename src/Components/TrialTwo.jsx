@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { Power3 } from "gsap/gsap-core";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import blueplanet from "../images/blueplanet.png";
+import blueplanet from "../images/earth.png";
 
 gsap.registerPlugin(useGSAP);
 
@@ -14,15 +14,20 @@ export default function TrailT() {
 
   const handleMouse = () => {
     gsap.to(planetImg.current, {
-      duration: 10,
+      duration: 1,
       opacity: 1,
-      y: -90,
-      rotation: -100,
-      ease: "bounce.in(5, 0.4)",
-
-    },
-    
-    {scope: container});
+      rotation: 100,
+      ease: Power3.easeInOut,
+      onComplete: () => {
+        gsap.to(planetImg.current, {
+          y:-50,
+          duration: 0.6,
+          ease: Power3.easeInOut,
+          repeat: -1,
+          yoyo: true,
+        })
+      },
+    });
   };
 
   useGSAP(
@@ -45,15 +50,13 @@ export default function TrailT() {
         onClick={handleMouse}
         src={blueplanet}
         alt="Planet"
-        width={400}
-        height={400}
         className="blue-planet"
       />
       <h1
         ref={text}
         className="title"
       >
-        Earth
+       ^ <br /> Click For Earth
       </h1>
     </div>
   );
