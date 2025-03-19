@@ -12,6 +12,12 @@ function App() {
 
   return (
     <div className='wholeContent'>
+      <div className='trialTwo'>
+        <TrailT />
+      </div>
+      <div className='trialThree'>
+        <TrialThr />
+      </div>
       <div className={styles.container}>
         <UseTransition />
         <ExitEnter />
@@ -19,13 +25,7 @@ function App() {
       <div className={styles.container}>
         <UseSpring />
         <DraggableList items={'Mars Venus Earth Mercury Saturn Uranus Neptune'.split(' ')} />
-      </div>
-      <div className='trialTwo'>
-        <TrailT />
-      </div>
-      <div className='trialThree'>
-        <TrialThr />
-      </div>
+      </div>      
     </div>
   )
 }
