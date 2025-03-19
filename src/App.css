@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    color: white;
+}
+
+.coloursContainer {
+    width: 200px;
+    height: 200px;
+}
+
+.colour {
+    font-size: 4em;
+}
+
+.Jupiter {
+    color: orange;
+}
+
+.Venus {
+    color: rgb(89, 158, 89);
+}
+
+.Earth {
+    color: rgb(72, 145, 214);
+}
+
+.Mercury {
+    color: rgb(214, 169, 72);
+}
+
+.Mars {
+    color: rgb(214, 107, 72);
+}
+
+.Neptune {
+    color: rgb(118, 45, 201);
+}
+
+.twoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twoTitle {
+    opacity: 0;
+    font-weight: bold;
+    font-size: 60px;
+    color: rgb(254, 249, 195);
+    text-align: center;
+}
+
+.trialTwo {
+    height: 100vh;
+    background: black;
+}
+
+.trialThree {
+    height: 50vh;
+    background: black;
+}
