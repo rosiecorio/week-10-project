@@ -7,17 +7,16 @@ import UseSpring from './Components/UseSpring'
 import UseTransition from './Components/UseTransition'
 import TrailT from './Components/TrialTwo'
 import TrialThr from './Components/TrialThree'
+import Trial from './Components/Trail'
 
 function App() {
 
   return (
     <div className='wholeContent'>
-      <div className='trialTwo'>
         <TrailT />
-      </div>
-      <div className='trialThree'>
         <TrialThr />
-      </div>
+        <Trial />
+    
       <div className={styles.container}>
         <UseTransition />
         <ExitEnter />
