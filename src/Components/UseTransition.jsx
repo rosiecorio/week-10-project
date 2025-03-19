@@ -25,7 +25,7 @@ const UseTransition = () => {
     }
 
     return (
-        <div>
+        <section>
             <h2>UseTransition</h2>
             <br/>
             <div className='coloursContainer' onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
@@ -40,7 +40,7 @@ const UseTransition = () => {
                     </animated.div>
                 ))}
             </div>            
-        </div>
+        </section>
     )
 }
 

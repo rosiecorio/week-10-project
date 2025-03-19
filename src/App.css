@@ -63,3 +63,9 @@ body {
     height: 50vh;
     background: black;
 }
+
+.listItem {
+    background: black;
+    border-radius: 25%;
+    padding: 3px;
+}

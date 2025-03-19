@@ -25,7 +25,7 @@ function App() {
       <div className={styles.container}>
         <UseSpring />
         <DraggableList items={'Mars Venus Earth Mercury Saturn Uranus Neptune'.split(' ')} />
-      </div>      
+      </div>    
     </div>
   )
 }

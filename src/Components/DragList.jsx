@@ -36,7 +36,7 @@ export function DraggableList({ items }) {
   return (
     <div className={styles.content} style={{ height: items.length * 50 }}>
       {springs.map(({ zIndex, shadow, y, scale }, i) => (
-        <animated.div
+        <animated.div className="listItem"
           {...bind(i)}
           key={i}
           style={{
