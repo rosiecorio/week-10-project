@@ -26,7 +26,7 @@ const UseSpring = () => {
     const handleMouseLeave = () => {
         api.start({
             from: { x : currentPosition},
-            to: { x : 0},
+            to: { x : 0 , transform: 'rotate(0deg)'},
             config: { duration: 5000 },
         })
     }
