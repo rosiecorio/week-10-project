@@ -1,3 +1,4 @@
+import "./Trial2.css"
 import React, { useRef } from "react";
 import { Power3 } from "gsap/gsap-core";
 import gsap from "gsap";
@@ -13,12 +14,15 @@ export default function TrailT() {
 
   const handleMouse = () => {
     gsap.to(planetImg.current, {
-      duration: 2,
+      duration: 10,
       opacity: 1,
-      y: -40,
-      rotation: -90,
-      ease: Power3.easeInOut,
-    });
+      y: -90,
+      rotation: -100,
+      ease: "bounce.in(5, 0.4)",
+
+    },
+    
+    {scope: container});
   };
 
   useGSAP(
@@ -35,7 +39,7 @@ export default function TrailT() {
   );
 
   return (
-    <div ref={container} className="twoContainer">
+    <div ref={container} className="container">
       <img
         ref={planetImg}
         onClick={handleMouse}
@@ -43,11 +47,11 @@ export default function TrailT() {
         alt="Planet"
         width={400}
         height={400}
-        className="opacity-0"
+        className="blue-planet"
       />
       <h1
         ref={text}
-        className="twoTitle"
+        className="title"
       >
         Earth
       </h1>

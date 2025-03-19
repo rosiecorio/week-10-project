@@ -1,0 +1,15 @@
+.container {
+        height: 100vh;
+        position: relative;
+        display: flex;
+}
+.neptune {
+        position: absolute;
+        top: 200px;
+        left: 70px;
+}
+.earth {
+        position: absolute;
+        bottom: 400px;
+        right: 400px;
+}

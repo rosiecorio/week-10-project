@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Modak&family=Pixelify+Sans&family=Righteous&family=Sniglet&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.container {
+        display: flex;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.blue-planet {
+        opacity: 0;
+}
+.title {
+        opacity: 0;
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+        font-size: 60px;
+        color: rgb(218, 232, 113);
+        text-align: center;
+}

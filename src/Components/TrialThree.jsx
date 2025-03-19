@@ -1,4 +1,4 @@
-
+import "./Trial3.css"
 import neptune from "../images/neptune.png";
 import earth from "../images/earth.png";
 import { ScrollTrigger } from "gsap/all";
@@ -19,7 +19,7 @@ export default function TrialThr() {
         start: "top 80%",
         end: "top 30%",
         toggleActions: "restart none none none",
-        scrub: 4,
+        scrub: 2,
       },
       x: 500,
       y: -90,
@@ -27,6 +27,12 @@ export default function TrialThr() {
       duration: 9,
       ease: Power3.easeInOut,
     });
+    gsap.to(neptunePlanet.current, {
+      rotate: 360,
+      duration: 4,
+      repeat: -1,
+      ease: "linear",
+    })
   });
 
   useGSAP(() => {
@@ -34,28 +40,33 @@ export default function TrialThr() {
     gsap.to(earthPlanet.current, {
       scrollTrigger: {
         trigger: earthPlanet.current,
-        start: "top 40%",
-        end: "top 90%",
-        scrub: 8,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 2,
       },
       x: -200,
       y: 300,
       rotate: -200,
       duration: 9,
-      delay: 0.1,
-      ease: Power3.easeInOut,
+      ease: Power3.easeOut,
     });
+    gsap.to(earthPlanet.current, {
+      rotate: -360,
+      duration: 4,
+      repeat: -1,
+      ease: "linear",
+    })
   });
 
   return (
-    <div>
+    <div className="container">
       <img
         ref={neptunePlanet}
         src={neptune}
         alt="neptune"
         width={200}
         height={200}
-        className="planet"
+        className="neptune"
       />
       <img
         ref={earthPlanet}
@@ -63,7 +74,7 @@ export default function TrialThr() {
         alt="earth planet"
         width={200}
         height={200}
-        className="planet"
+        className="earth"
       />
     </div>
   );
