@@ -17,11 +17,11 @@ function App() {
         <TrialThr />
         <Trial />
     
-      <div className={styles.container}>
+      <div className='useTransition'>
         <UseTransition />
         <ExitEnter />
       </div>
-      <div className={styles.container}>
+      <div className='useSpring'>
         <UseSpring />
         <DraggableList items={'Mars Venus Earth Mercury Saturn Uranus Neptune'.split(' ')} />
       </div>      
